@@ -114,10 +114,6 @@ html.theme-light .footer__title {
     background-color: var(--accent-color);
   }
 
-  .title-decor {
-    background-color: transparent;
-  }
-
   .rec-element {
     display: none;
   }
