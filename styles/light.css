@@ -35,10 +35,6 @@ html.theme-light .header__text {
   background-color: var(--accent-color);
 }
 
-html.theme-light .title-decor {
-  background-color: transparent;
-}
-
 html.theme-light .rec-element {
   display: none;
 }

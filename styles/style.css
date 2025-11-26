@@ -53,6 +53,7 @@
 }
 
 .header__title {
+  box-sizing: border-box;
   font-family: var(--main-font);
   font-weight: bold;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -61,7 +62,7 @@
   text-shadow: 4px 4px 0 var(--accent-color);
   text-transform: lowercase;
   height: 192px;
-  width: 100%;
+  max-width: 100%;
   align-self: center;
   justify-self: start;
   margin: 0 10px;
@@ -74,12 +75,14 @@
   line-height: 23.4px;
   color: var(--section-title-color);
   background-color: var(--accent-color);
-  width: 355px;
   height: 117px;
   align-self: start;
   justify-self: end;
+  margin-left: 10px;
   margin-right: 10px;
+  max-width: 100%;
 }
+
 
 .rec-element {
   font-family: var(--main-font);
@@ -106,6 +109,7 @@
 }
 
 .decorated_zone {
+  max-width: 100%;
   position: relative;
 }
 
@@ -139,10 +143,12 @@
   margin-left: 10px;
 }
 
+
 .main_section {
   display: grid;
   grid-template-columns: 1fr;
   padding: 0 10px;
+  max-width: 100%;
 }
 
 .title-decor {
@@ -178,6 +184,7 @@
 }
 
 .section_why-so-hard-to-conc {
+  max-width: 100%;
   margin-block-end: 50px;
 }
 
@@ -187,6 +194,7 @@
 }
 
 .section_what-reduces-conc {
+  max-width: 100%;
   margin-block-end: 50px;
 }
 
@@ -219,6 +227,7 @@
 }
 
 .content_article {
+  max-width: 100%;
   font-family: var(--main-font);
   font-weight: normal;
   font-size: 18px;
@@ -233,6 +242,7 @@
 }
 
 .section_gallery {
+  max-width: 100%;
   padding: 50px 10px 40px 10px;
 }
 
@@ -253,10 +263,12 @@
 }
 
 .footer {
+  box-sizing: border-box;
   display: grid;
   justify-items: center;
   align-items: center;
   height: 100vh;
+  max-width: 100%;
   min-height: 668px;
   padding: 0px 13px 0 14px;
 }
@@ -264,7 +276,7 @@
 .footer__title {
   font-family: var(--main-font);
   font-weight: bold;
-  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
   color: var(--focus-color);
   text-shadow: 4px 4px 0 var(--accent-color);
@@ -508,15 +520,13 @@
 
   .subtitle_why-so-hard-to-conc {
     margin-block-end: 10px;
+    grid-column: 2 / 3;
   }
 
   .content_article_why-so-hard-to-conc {
     grid-column: 2 / 3;
   }
 
-  .subtitle_why-so-hard-to-conc {
-    grid-column: 2 / 3;
-  }
   .title_what-reduces-conc {
     margin-block-end: 20px;
   }
