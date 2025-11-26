@@ -1,12 +1,98 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --theme-path: url("../images/cover-image-dark.png");
+  --accent-color: #ff0070;
+  --back-color: #000437;
+  --focus-color: #db00ff;
+  --section-title-color: #000028;
+  --section-subtitle-color: #000028;
+  --article-text-color: #f1b2ce;
+}
+
+.page {
+  background-image: var(--theme-path);
+  background-color: var(--back-color);
+}
+
+.header__theme-menu-button {
+  color: var(--accent-color);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 141, 203, 0.4);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.header__theme-menu-button_active:hover {
+  border: 1px solid var(--accent-color);
+}
+
+.header__title {
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__text {
+  color: var(--section-title-color);
+  background-color: var(--accent-color);
+}
+
+.rec-element {
+  color: var(--accent-color);
+}
+
+.rec-element::after {
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.decorated_zone::before {
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.decorated_zone::after {
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.title-decor {
+  background-color: var(--back-color);
+}
+
+.h2_title {
+  color: var(--accent-color);
+}
+
+.h3_title {
+  background-color: var(--accent-color);
+  color: var(--section-title-color);
+}
+
+.h4_title {
+  background-color: var(--accent-color);
+  color: var(--section-title-color);
+}
+
+.article_link {
+  text-shadow: 2px 1px var(--accent-color);
+}
+
+.article_link:hover {
+  border-bottom: 1px solid var(--article-text-color);
+}
+
+.article_link:focus {
+  outline: 1px solid var(--article-text-color);
+}
+
+.content_article {
+  color: var(--article-text-color);
+}
+
+.footer__title {
+  color: var(--focus-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
