@@ -2,9 +2,20 @@
   --theme-path: url("../images/cover-image-dark.png");
   --accent-color: #ff0070;
   --back-color: #000028;
-  --focus-color: #DB00FF;
-  --section-title-color: #000028;
+  --focus-color: #db00ff;
+  --section-title-color: #ff0070;
   --section-subtitle-color: #000028;
+  --theme-switch-color: #ff0070;
+  --header-text-color: #000028;
   --article-text-color: #f1b2ce;
+  --decorated-color: #ff0070;
   --hover-color: rgba(255, 0, 112, 0.4);
+}
+
+html.theme-dark .rec-element {
+  display: inline-block;
+}
+
+html.theme-dark .rec-element::after {
+  display: inline-block;
 }
