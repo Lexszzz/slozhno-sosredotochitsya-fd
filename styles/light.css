@@ -6,6 +6,7 @@
   --section-title-color: #353430;
   --section-subtitle-color: #353430;
   --article-text-color: #353430;
+  --hover-color: rgba(53, 52, 48, 0.4);
 }
 
 html.theme-light .page {
@@ -18,7 +19,7 @@ html.theme-light .header__theme-menu-button {
 }
 
 html.theme-light .header__theme-menu-button:hover {
-  border: 1px solid rgba(53, 52, 48, 0.4);
+  border: 1px solid var(--hover-color);
 }
 
 html.theme-light .header__theme-menu-button_active {
@@ -96,9 +97,9 @@ html.theme-light .footer__title {
     color: var(--article-text-color);
   }
 
-  .header__theme-menu-button:hover {
-    border: 1px solid rgba(53, 52, 48, 0.4);
-  }
+ .header__theme-menu-button:hover {
+  border: 1px solid var(--hover-color);
+}
 
   .header__theme-menu-button_active {
     border: 1px solid var(--article-text-color);

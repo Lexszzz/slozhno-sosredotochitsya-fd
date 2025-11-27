@@ -24,6 +24,7 @@
 }
 
 .header__theme-menu-button {
+  margin-right: 10px;
   font-family: var(--main-font);
   font-size: 18px;
   padding: 0 13px;
@@ -37,7 +38,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid rgba(255, 0, 112, 0.4);
+  outline: 1px solid var(--hover-color);
 }
 
 .header__theme-menu-button:focus {
@@ -61,9 +62,8 @@
   color: var(--focus-color);
   text-shadow: 4px 4px 0 var(--accent-color);
   text-transform: lowercase;
-  height: 192px;
+  height: auto;
   max-width: 100%;
-  align-self: center;
   justify-self: start;
   margin: 0 10px;
 }
@@ -284,6 +284,7 @@
 }
 
 @media (min-width: 668px) {
+
   .rec-element {
     margin-top: 20px;
   }
@@ -306,13 +307,21 @@
     margin-top: 192px;
   }
 
+  
+  .header__theme-menu-button {
+  margin-right: 20px;
+  }
+
   .header__text {
     width: 364px;
     height: 117px;
+    margin-bottom: 10px;
     margin-right: 20px;
   }
 
   .header__title {
+    margin: 0;
+    height: auto;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
@@ -351,17 +360,19 @@
 
   .subtitle_why-so-hard-to-conc {
     margin-block-end: 10px;
+    margin-left: 13px;
     grid-column: 2 / 3;
+  }
+
+  .content_article_why-so-hard-to-conc {
+    margin-left: 13px;
+    grid-column: 2 / 4;
   }
 
   .section_what-reduces-conc {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0;
-  }
-
-  .content_article_why-so-hard-to-conc {
-    grid-column: 2 / 4;
   }
 
   .title_what-reduces-conc {
@@ -375,32 +386,32 @@
   }
 
   .title_multitasking {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     grid-row: 2;
   }
 
   .article_multitasking {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     grid-row: 3;
   }
 
   .title_food {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     grid-row: 4;
   }
 
   .article_food {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     grid-row: 5;
   }
 
   .title_gadgets {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     grid-row: 6;
   }
 
   .article_gadgets {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     grid-row: 7;
   }
 
@@ -411,29 +422,32 @@
   }
 
   .title_how-to-conc {
-    margin-right: 20px;
+    margin-right: 10px;
     grid-column: 1 / 2;
     grid-row: 1 / 4;
   }
 
   .title_5_advises {
     margin-block-end: 20px;
+    margin-left: 13px;
     grid-column: 2 / 4;
     grid-row: 1 / 2;
   }
 
   .subtitle_how-to-conc {
     margin-block-end: 10px;
+    margin-left: 13px;
     grid-column: 2 / 4;
   }
 
   .content_how-to-conc {
     margin-block-end: 20px;
+    margin-left: 13px;
     grid-column: 2 / 4;
   }
 
   .section_gallery {
-    padding: 60px 20px 60px 20px;
+    padding: 80px 20px 60px 20px;
   }
   .title_gallery {
     margin-block-end: 20px;
@@ -441,8 +455,12 @@
   .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
     gap: 20px;
+  }
+
+  .gallery_item {
+    object-fit: cover;
   }
 
   .g_item_1 {
@@ -477,20 +495,27 @@
 
 @media (min-width: 1024px) {
   .header__theme-menu-list {
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    flex-direction: row;
     gap: 10px;
   }
 
   .header__theme-menu {
     margin-top: 20px;
+    width: 230px;
     justify-self: center;
+    margin-block-end: 155px;
+  }
+
+  .header__theme-menu-button {
+    margin: 0;
   }
 
   .header__text {
     width: 491px;
     height: 71px;
     margin-right: 20px;
+    margin-bottom: 15px;
   }
 
   .h2_title {
@@ -520,11 +545,13 @@
 
   .subtitle_why-so-hard-to-conc {
     margin-block-end: 10px;
+    margin-left: 7px;
     grid-column: 2 / 3;
   }
 
   .content_article_why-so-hard-to-conc {
     grid-column: 2 / 3;
+    margin-left: 7px;
   }
 
   .title_what-reduces-conc {
@@ -536,40 +563,45 @@
   }
   .subtitle_what-reduces-conc {
     margin-block-end: 10px;
-    margin-right: 20px;
     grid-column: 2 / 3;
   }
 
   .title_multitasking {
+    margin-right: 12px;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
 
   .article_multitasking {
-    margin-right: 20px;
+    margin-right: 12px;
     margin-bottom: 0;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
   }
 
   .title_food {
+    margin-left: 7px;
+    margin-right: 6px;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
   }
 
   .article_food {
-    margin-right: 20px;
+    margin-left: 7px;
+    margin-right: 6px;
     margin-bottom: 0;
     grid-column: 2 / 3;
     grid-row: 3 / 4;
   }
 
   .title_gadgets {
+    margin-left: 14px;
     grid-column: 3 / 4;
     grid-row: 2 / 3;
   }
 
   .article_gadgets {
+    margin-left: 14px;
     margin-bottom: 0;
     grid-column: 3 / 4;
     grid-row: 3 / 4;
@@ -587,14 +619,20 @@
   }
 
   .title_5_advises {
+    margin-left: 7px;
     margin-block-end: 20px;
     grid-column: 2 / 4;
     grid-row: 1 / 2;
   }
 
   .subtitle_how-to-conc {
+    margin-left: 7px;
     margin-block-end: 10px;
     grid-column: 2 / 4;
+  }
+
+  .content_how-to-conc {
+    margin-left: 7px;
   }
 
   .section_gallery {
